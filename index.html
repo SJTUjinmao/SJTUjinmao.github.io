@@ -4,35 +4,402 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Bang Xie · AI for Code</title>
+<meta name="description" content="Bang Xie, Master's student at Shanghai Jiao Tong University, researching AI for Code.">
+
 <style>
-:root{--bg:#f4f2ec;--ink:#14212a;--green:#1f5a49;--orange:#d8793c;--line:#cecac1;--muted:#687178}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 Arial,sans-serif}a{color:inherit;text-decoration:none}header{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:20px 5vw;border-bottom:1px solid var(--line);background:#f4f2ecf2}.logo{font:600 28px Georgia}.logo i{color:var(--orange)}nav{display:flex;gap:25px;font:11px monospace;letter-spacing:.1em;text-transform:uppercase}.meta,.eyebrow{color:var(--green);font:11px monospace;letter-spacing:.12em;text-transform:uppercase}main{max-width:1180px;margin:auto;padding:85px 24px;display:grid;grid-template-columns:300px 1fr;gap:90px}aside{align-self:start}.photo{height:265px;overflow:hidden;background:var(--green);border:1px solid var(--ink)}.photo img{width:100%;height:100%;object-fit:cover;object-position:center 60%}.name{font:500 52px/1 Georgia;margin:25px 0 12px}.role{font:20px Georgia;margin:0}.muted{color:var(--muted);margin:3px 0}.contact{margin:25px 0;padding:20px 0;border-block:1px solid var(--line);font-size:13px}.contact a{color:var(--green);text-decoration:underline}.focus{padding:18px;border-left:4px solid var(--orange);background:#dce7e1}.focus b{display:block;font:26px Georgia}.hero{min-height:520px;padding:10px 0 80px;border-bottom:1px solid var(--ink)}h1{font:500 clamp(58px,8vw,104px)/.96 Georgia;margin:28px 0 38px;letter-spacing:-.06em}h1 em{color:var(--green)}.intro{max-width:700px;margin:0;font:23px/1.55 Georgia;color:#39464f}section{padding:70px 0;border-bottom:1px solid var(--line)}h2{font:500 42px Georgia;margin:5px 0 28px}.row{display:grid;grid-template-columns:50px 1fr;gap:15px;border-top:1px solid var(--line);padding:18px 0}.row>span{color:var(--orange);font:11px monospace}.row h3{font:500 20px Georgia;margin:0 0 6px}.row p{margin:0;color:var(--muted)}.tag{display:inline-block;margin-top:8px;padding:3px 7px;background:#dce7e1;color:var(--green);font:10px monospace}@media(max-width:760px){nav,.meta{display:none}main{display:block;padding-top:45px}.content{margin-top:55px}.hero{min-height:0}}
+:root{
+  --bg:#f4f2ec;
+  --ink:#14212a;
+  --green:#1f5a49;
+  --orange:#d8793c;
+  --line:#cecac1;
+  --muted:#687178;
+  --soft:#dce7e1;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:
+    linear-gradient(#14212a08 1px,transparent 1px),
+    linear-gradient(90deg,#14212a08 1px,transparent 1px),
+    var(--bg);
+  background-size:48px 48px;
+  color:var(--ink);
+  font:15px/1.65 Arial,sans-serif;
+}
+
+a{color:inherit;text-decoration:none}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:2;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 5vw;
+  border-bottom:1px solid var(--line);
+  background:#f4f2ecf2;
+  backdrop-filter:blur(8px);
+}
+
+.logo{font:600 28px Georgia,serif}
+.logo i{color:var(--orange)}
+
+nav{
+  display:flex;
+  gap:25px;
+  font:11px monospace;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+nav a:hover{color:var(--orange)}
+
+.meta,.eyebrow{
+  color:var(--green);
+  font:11px monospace;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+main{
+  display:grid;
+  grid-template-columns:300px minmax(0,1fr);
+  gap:90px;
+  width:min(1180px,calc(100% - 48px));
+  margin:auto;
+  padding:85px 0 50px;
+}
+
+aside{align-self:start}
+
+.photo{
+  height:265px;
+  overflow:hidden;
+  border:1px solid var(--ink);
+  background:var(--green);
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 60%;
+}
+
+.name{
+  margin:25px 0 12px;
+  font:500 52px/1 Georgia,serif;
+}
+
+.role{
+  margin:0;
+  font:20px Georgia,serif;
+}
+
+.muted{
+  margin:3px 0;
+  color:var(--muted);
+}
+
+.contact{
+  margin:25px 0;
+  padding:20px 0;
+  border-block:1px solid var(--line);
+  font-size:13px;
+}
+
+.contact a{
+  color:var(--green);
+  text-decoration:underline;
+}
+
+.focus{
+  padding:18px;
+  border-left:4px solid var(--orange);
+  background:var(--soft);
+}
+
+.focus b{
+  display:block;
+  font:26px Georgia,serif;
+}
+
+.hero{
+  min-height:520px;
+  padding:10px 0 80px;
+  border-bottom:1px solid var(--ink);
+}
+
+h1{
+  margin:28px 0 38px;
+  font:500 clamp(58px,8vw,104px)/.96 Georgia,serif;
+  letter-spacing:-.06em;
+}
+
+h1 em{
+  color:var(--green);
+  font-weight:400;
+}
+
+.intro{
+  max-width:700px;
+  margin:0;
+  color:#39464f;
+  font:23px/1.55 Georgia,serif;
+}
+
+section{
+  padding:70px 0;
+  border-bottom:1px solid var(--line);
+}
+
+h2{
+  margin:5px 0 28px;
+  font:500 42px Georgia,serif;
+}
+
+.row{
+  display:grid;
+  grid-template-columns:50px minmax(0,1fr);
+  gap:15px;
+  padding:18px 0;
+  border-top:1px solid var(--line);
+}
+
+.row>span{
+  color:var(--orange);
+  font:11px monospace;
+}
+
+.row h3{
+  margin:0 0 6px;
+  font:500 20px/1.35 Georgia,serif;
+}
+
+.row p{
+  margin:0;
+  color:var(--muted);
+}
+
+.tag{
+  display:inline-block;
+  margin-top:8px;
+  padding:4px 8px;
+  background:var(--soft);
+  color:var(--green);
+  font:10px monospace;
+  font-style:normal;
+  letter-spacing:.04em;
+}
+
+@media(max-width:760px){
+  nav,.meta{display:none}
+  main{display:block;padding-top:45px}
+  aside{max-width:400px}
+  .content{margin-top:55px}
+  .hero{min-height:0}
+}
 </style>
 </head>
+
 <body>
-<header><a class="logo" href="#top">BX<i>.</i></a><nav><a href="#about">About</a><a href="#research">Research</a><a href="#works">Works</a></nav><span class="meta">AI4CODE · 2025</span></header>
+<header>
+  <a class="logo" href="#top">BX<i>.</i></a>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#works">Works</a>
+    <a href="#education">Education</a>
+  </nav>
+
+  <span class="meta">AI4CODE · 2025</span>
+</header>
+
 <main id="top">
 <aside>
-  <div class="photo"><img src="profile.jpg" alt="Bang Xie"></div>
-  <p class="eyebrow">Research profile</p><p class="name">Bang Xie</p>
-  <p class="role">Master's Student</p><p class="muted">Shanghai Jiao Tong University<br>2025 Cohort</p>
-  <div class="contact">Email<br><a href="mailto:xiebang-1213@sjtu.edu.cn">xiebang-1213@sjtu.edu.cn</a><br><br>Shanghai, China</div>
-  <div class="focus"><small>Current focus</small><b>AI for Code</b><small>AI4Code</small></div>
+  <div class="photo">
+    <img src="profile.jpg" alt="Bang Xie">
+  </div>
+
+  <p class="eyebrow">Research profile</p>
+  <p class="name">Bang Xie</p>
+  <p class="role">Master's Student</p>
+  <p class="muted">
+    Shanghai Jiao Tong University<br>
+    2025 Cohort
+  </p>
+
+  <div class="contact">
+    Email<br>
+    <a href="mailto:xiebang-1213@sjtu.edu.cn">
+      xiebang-1213@sjtu.edu.cn
+    </a>
+    <br><br>
+    Shanghai, China
+  </div>
+
+  <div class="focus">
+    <small>Current focus</small>
+    <b>AI for Code</b>
+    <small>AI4Code</small>
+  </div>
 </aside>
+
 <div class="content">
-<section class="hero" id="about"><p class="eyebrow">About me</p><h1>Building intelligence<br><em>for code.</em></h1><p class="intro">I am a master's student in the 2025 cohort at Shanghai Jiao Tong University. My research focuses on AI for Code — using artificial intelligence to comprehend, create, and improve software.</p></section>
-<section id="research"><p class="eyebrow">Research</p><h2>Areas of interest</h2>
-<div class="row"><span>01</span><div><h3>Program Understanding</h3><p>Representing, analyzing, and reasoning about source code.</p></div></div>
-<div class="row"><span>02</span><div><h3>Code Generation</h3><p>Translating intent and context into reliable software artifacts.</p></div></div>
-<div class="row"><span>03</span><div><h3>AI-assisted Software Engineering</h3><p>Supporting developers throughout the software development lifecycle.</p></div></div>
-<div class="row"><span>04</span><div><h3>Reinforcement Learning</h3><p>Building task-specific datasets to fine-tune code models with reinforcement learning.</p></div></div>
+<section class="hero" id="about">
+  <p class="eyebrow">About me</p>
+
+  <h1>
+    Building intelligence<br>
+    <em>for code.</em>
+  </h1>
+
+  <p class="intro">
+    I am a master's student in the 2025 cohort at Shanghai Jiao Tong
+    University. My research focuses on AI for Code — using artificial
+    intelligence to comprehend, create, and improve software.
+  </p>
 </section>
-<section id="works"><p class="eyebrow">Selected works</p><h2>Research outcomes</h2>
-<div class="row"><span>01</span><div><h3><a href="https://arxiv.org/abs/2602.08866">ArkEval: Benchmarking and Evaluating Automated Code Repair for ArkTS ↗</a></h3><p>Bang Xie, Senjian Zhang, Zhiyuan Peng, Wei Chen, Chenhao Ying, Yuan Luo</p><i class="tag">Accepted</i></div></div>
-<div class="row"><span>02</span><div><h3>From Reasoning Strings to Partial Orders: Verifier-Certified Rule Transport through Quotient Policy Optimization</h3><i class="tag">AAAI 2027 · Under Review</i></div></div>
-<div class="row"><span>03</span><div><h3>AppEval: A Unified Benchmark for LLM-Based Mobile Application Repair in ArkTS, Swift, and Kotlin</h3><i class="tag">AAAI 2027 · Under Review</i></div></div>
-<div class="row"><span>04</span><div><h3>PonyEval: Evaluating LLM-Based Program Repair for Capability-Safe and Actor-Oriented Pony Software</h3><i class="tag">AAAI 2027 · Under Review</i></div></div>
-<div class="row"><span>05</span><div><h3>OdinEval: A Reproducible Benchmark for LLM-Based Program Repair in the Odin Programming Language</h3><i class="tag">AAAI 2027 · Under Review</i></div></div>
-<div class="row"><span>06</span><div><h3><a href="https://arxiv.org/abs/2601.23009">SolAgent: A Specialized Multi-Agent Framework for Solidity Code Generation ↗</a></h3><p>Wei Chen, Zhiyuan Peng, Xin Yin, Chao Ni, Chenhao Ying, Bang Xie, Yuan Luo</p><i class="tag">arXiv</i></div></div>
+
+<section id="research">
+  <p class="eyebrow">Research</p>
+  <h2>Areas of interest</h2>
+
+  <div class="row">
+    <span>01</span>
+    <div>
+      <h3>Program Understanding</h3>
+      <p>Representing, analyzing, and reasoning about source code.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <span>02</span>
+    <div>
+      <h3>Code Generation</h3>
+      <p>Translating intent and context into reliable software artifacts.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <span>03</span>
+    <div>
+      <h3>AI-assisted Software Engineering</h3>
+      <p>Supporting developers throughout the software development lifecycle.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <span>04</span>
+    <div>
+      <h3>Reinforcement Learning</h3>
+      <p>
+        Building task-specific datasets and using them to fine-tune code
+        models with reinforcement learning.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="works">
+  <p class="eyebrow">Selected works</p>
+  <h2>Research outcomes</h2>
+
+  <div class="row">
+    <span>01</span>
+    <div>
+      <h3>
+        <a href="https://arxiv.org/abs/2602.08866" target="_blank">
+          ArkEval: Benchmarking and Evaluating Automated Code Repair for ArkTS ↗
+        </a>
+      </h3>
+      <p>
+        Bang Xie, Senjian Zhang, Zhiyuan Peng, Wei Chen,
+        Chenhao Ying, Yuan Luo
+      </p>
+      <i class="tag">ASE · Accepted (CCF-A)</i>
+    </div>
+  </div>
+
+  <div class="row">
+    <span>02</span>
+    <div>
+      <h3>
+        From Reasoning Strings to Partial Orders: Verifier-Certified Rule
+        Transport through Quotient Policy Optimization
+      </h3>
+      <i class="tag">AAAI 2027 · Under Review</i>
+    </div>
+  </div>
+
+  <div class="row">
+    <span>03</span>
+    <div>
+      <h3>
+        AppEval: A Unified Benchmark for LLM-Based Mobile Application Repair
+        in ArkTS, Swift, and Kotlin
+      </h3>
+      <i class="tag">AAAI 2027 · Under Review</i>
+    </div>
+  </div>
+
+  <div class="row">
+    <span>04</span>
+    <div>
+      <h3>
+        PonyEval: Evaluating LLM-Based Program Repair for Capability-Safe
+        and Actor-Oriented Pony Software
+      </h3>
+      <i class="tag">AAAI 2027 · Under Review</i>
+    </div>
+  </div>
+
+  <div class="row">
+    <span>05</span>
+    <div>
+      <h3>
+        OdinEval: A Reproducible Benchmark for LLM-Based Program Repair
+        in the Odin Programming Language
+      </h3>
+      <i class="tag">AAAI 2027 · Under Review</i>
+    </div>
+  </div>
+
+  <div class="row">
+    <span>06</span>
+    <div>
+      <h3>
+        <a href="https://arxiv.org/abs/2601.23009" target="_blank">
+          SolAgent: A Specialized Multi-Agent Framework for Solidity Code
+          Generation ↗
+        </a>
+      </h3>
+      <p>
+        Wei Chen, Zhiyuan Peng, Xin Yin, Chao Ni,
+        Chenhao Ying, Bang Xie, Yuan Luo
+      </p>
+      <i class="tag">arXiv</i>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <p class="eyebrow">Education</p>
+  <h2>Academic background</h2>
+
+  <div class="row">
+    <span>SJ</span>
+    <div>
+      <h3>Shanghai Jiao Tong University</h3>
+      <p>Master's Student · 2025 Cohort · 2025—Present</p>
+    </div>
+  </div>
 </section>
 </div>
 </main>
