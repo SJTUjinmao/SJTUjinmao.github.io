@@ -3,581 +3,272 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bang Xie · AI for Code</title>
+<title>Bang Xie - Homepage</title>
 <meta name="description" content="Bang Xie, Master's student at Shanghai Jiao Tong University, researching AI for Code.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<script>document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/g,"")+" js ";</script>
 <style>
-:root{
-  --gray:#7a8288;
-  --dark-gray:#494e52;
-  --light-gray:#bdc1c4;
-  --lighter-gray:#ececed;
-  --text:#494e52;
-  --link:#224b8d;
-  --link-hover:#1a3768;
-  --border:#ececed;
-  --badge:#00369f;
-  --sans:"Trebuchet MS",Helvetica,sans-serif;
-  --max:1280px;
-  --scroll-offset:2em;
-}
-
 *,*::before,*::after{box-sizing:border-box}
+html{position:relative;min-height:100%;font-size:15px;-webkit-text-size-adjust:100%}
+body{margin:0;padding:0;color:#494e52;font:14px/1.5 "Trebuchet MS",Helvetica,sans-serif;background:#fff}
+a{color:#224b8d;text-decoration:none}
+a:hover{color:#1a386a}
+@keyframes intro{from{opacity:0}to{opacity:1}}
 
-html{
-  scroll-behavior:smooth;
-  position:relative;
-  min-height:100%;
-}
+.masthead{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #f2f3f3;animation:intro .3s both;animation-delay:.15s}
+.masthead__inner-wrap{max-width:925px;margin:0 auto;padding:.5em;font-family:"Trebuchet MS",Helvetica,sans-serif}
+@media(min-width:80em){.masthead__inner-wrap{max-width:1280px}}
 
-body{
-  margin:0;
-  padding:0;
-  color:var(--text);
-  font:14px/1.5 var(--sans);
-  background:#fff;
-}
+.greedy-nav{position:relative;min-width:250px;background:#fff}
+.greedy-nav a{display:block;margin:0 1rem;padding:.5rem 0;color:#7a8288;text-decoration:none;font-weight:600}
+.greedy-nav a:hover{color:#5c6266}
+.greedy-nav button{position:absolute;top:0;right:0;height:100%;padding:0 .5rem;border:0;outline:none;background:#7a8288;color:#fff;cursor:pointer;z-index:2}
+.greedy-nav .navicon{position:relative;display:block;width:28px;height:4px;background:#fff;margin:auto}
+.greedy-nav .navicon::before,.greedy-nav .navicon::after{content:"";position:absolute;left:0;width:28px;height:4px;background:#fff}
+.greedy-nav .navicon::before{top:-8px}
+.greedy-nav .navicon::after{bottom:-8px}
+.greedy-nav .visible-links{display:table;margin:0;padding:0;list-style:none}
+.greedy-nav .visible-links li{display:table-cell;vertical-align:middle;white-space:nowrap}
+.greedy-nav .visible-links li:first-child{font-weight:700}
+.greedy-nav .visible-links li:first-child a{margin-left:0}
+.greedy-nav .visible-links a{position:relative}
+.greedy-nav .visible-links a::before{content:"";position:absolute;left:0;bottom:0;height:4px;background:#bdc1c4;width:100%;transform:scaleX(0);transition:transform .2s ease-in-out}
+.greedy-nav .visible-links a:hover::before{transform:scaleX(1)}
+.masthead__menu-home-item{display:none!important}
+@media(min-width:48em){.masthead__menu-home-item{display:table-cell!important}}
 
-a{
-  color:var(--link);
-  text-decoration:none;
-}
-a:hover{color:var(--link-hover);text-decoration:underline}
+.greedy-nav .hidden-links{position:absolute;top:100%;right:0;margin-top:15px;padding:5px;list-style:none;border:1px solid #f2f3f3;border-radius:4px;background:#fff;box-shadow:0 0 10px rgba(0,0,0,.25);z-index:30}
+.greedy-nav .hidden-links.hidden{display:none}
+.greedy-nav .hidden-links li{display:block;border-bottom:1px solid #f2f3f3}
+.greedy-nav .hidden-links li:last-child{border-bottom:none}
+.greedy-nav .hidden-links a{margin:0;padding:10px 20px;font-size:1em}
 
-@keyframes intro{
-  from{opacity:0}
-  to{opacity:1}
-}
+#main{max-width:925px;margin:1em auto 3em;padding:0 1em;animation:intro .3s both;animation-delay:.35s}
+#main::after{content:"";display:table;clear:both}
+@media(min-width:80em){#main{max-width:1280px}}
 
-/* Masthead */
-.masthead{
-  position:sticky;
-  top:0;
-  z-index:20;
-  background:#fff;
-  border-bottom:1px solid var(--border);
-  animation:intro .3s both;
-  animation-delay:.15s;
-}
-
-.masthead__inner{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:.5em 1em;
-}
-
-.site-nav{
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-  min-height:36px;
+.sidebar{clear:both;margin-bottom:1em}
+@media(min-width:57.8125em){
+  .sidebar{width:15.2542372881%;float:left;margin-right:1.6949152542%}
+  .sticky{position:sticky;top:6em}
+  .page{width:83.0508474576%;float:right;padding-left:4.2372881356%}
 }
 
-.site-nav button{
-  display:none;
-  margin-left:auto;
-  width:36px;
-  height:36px;
-  padding:0;
-  border:0;
-  background:#fff;
-  cursor:pointer;
-}
+.profile_box{display:flex;align-items:center;justify-content:flex-start}
+@media(min-width:57.8125em){.profile_box{display:block}}
 
-.site-nav .navicon{
-  position:relative;
-  display:block;
-  width:24px;
-  height:4px;
-  margin:0 auto;
-  background:var(--gray);
-}
-.site-nav .navicon::before,
-.site-nav .navicon::after{
-  content:"";
-  position:absolute;
-  left:0;
-  width:24px;
-  height:4px;
-  background:var(--gray);
-}
-.site-nav .navicon::before{top:-8px}
-.site-nav .navicon::after{top:8px}
+.author__avatar{display:table-cell;vertical-align:top;width:75px}
+@media(min-width:57.8125em){.author__avatar{display:block;width:auto;height:auto}}
+.author__avatar img{max-width:175px;min-width:75px;width:75px;height:75px;object-fit:cover;object-position:center 60%;border-radius:12px}
+@media(min-width:57.8125em){.author__avatar img{width:100%;height:auto;padding:5px;border:1px solid #f2f3f3}}
 
-.site-nav .nav-links{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  list-style:none;
-  margin:0;
-  padding:0;
-}
+.author__content{display:table-cell;vertical-align:top;padding-left:10px;line-height:1;min-width:120px}
+@media(min-width:57.8125em){.author__content{display:block;width:100%;padding:0}}
+.author__name{margin:0;font-size:1em;font-weight:700}
+@media(min-width:57.8125em){.author__name{margin:10px 0;font-size:1.4em}}
+.author__bio{margin:0;line-height:1.5}
+@media(min-width:57.8125em){.author__bio{margin:10px 0 20px}}
 
-.site-nav .nav-links li{
-  white-space:nowrap;
-}
+.author__urls-wrapper{display:table-cell;vertical-align:middle}
+@media(min-width:57.8125em){.author__urls-wrapper{display:block}}
+.author__urls{margin:0;padding:0;list-style:none;font-size:1em;line-height:1.5}
+.author__urls li{margin-bottom:.35em;white-space:nowrap}
+.author__urls a{color:inherit;text-decoration:none}
+.author__urls a:hover{text-decoration:underline}
+.author__urls i{width:1.25em;margin-right:.25em;color:#7a8288;text-align:center}
+.author__urls_sm{display:block;padding:.25em;font-size:1.75em}
+.author__urls_sm a{color:inherit;text-decoration:none;margin-right:.35em}
+@media(min-width:57.8125em){.author__urls_sm{display:none}}
 
-.site-nav .nav-links a{
-  display:block;
-  padding:.5em 1em;
-  color:var(--dark-gray);
-  font-weight:600;
-  text-decoration:none;
-}
-.site-nav .nav-links a:hover{color:var(--link)}
+.page__content #about-me{margin-top:-10em}
+.page__content #about-me::before{content:"";display:block;position:relative;width:0;height:10em;margin-top:-10em}
+.page__content h1{margin-top:1em;padding-bottom:.5em;border-bottom:1px solid #f2f3f3;font-size:1.4em;font-weight:700;scroll-margin-top:2em}
+.page__content h1::before,.anchor::before{content:"";display:block;position:relative;width:0;height:2em;margin-top:-2em}
+.page__content p,.page__content li{font-size:1em}
+.page__content p{margin:0 0 .5em}
+.page__content ul{padding-inline-start:2em;margin-block:.5em 1em}
+.page__content li{margin-bottom:.5em}
+.page__content a{text-decoration:underline}
 
-.site-nav .nav-links .home a{
-  font-weight:700;
-  padding-left:0;
-}
-
-@media(max-width:767px){
-  .site-nav button{display:block}
-  .site-nav .nav-links{
-    display:none;
-    position:absolute;
-    top:100%;
-    right:0;
-    flex-direction:column;
-    align-items:stretch;
-    min-width:180px;
-    padding:.5em 0;
-    background:#fff;
-    border:1px solid var(--border);
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
-    z-index:30;
-  }
-  .site-nav .nav-links.is-open{display:flex}
-  .site-nav .nav-links a{padding:.55em 1.25em}
-}
-
-/* Main layout */
-#main{
-  max-width:var(--max);
-  margin:1em auto 3em;
-  padding:0 1em;
-  animation:intro .3s both;
-  animation-delay:.35s;
-}
-
-.layout{
-  display:flex;
-  flex-direction:column;
-  gap:2em;
-}
-
-@media(min-width:925px){
-  .layout{
-    flex-direction:row;
-    align-items:flex-start;
-    gap:2.5em;
-  }
-  .sidebar{
-    flex:0 0 22%;
-    max-width:280px;
-    position:sticky;
-    top:4.5em;
-  }
-  .page{
-    flex:1;
-    min-width:0;
-    padding-left:1.5em;
-  }
-}
-
-/* Sidebar / author profile */
-.profile-box{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:10px;
-  margin-bottom:1em;
-}
-
-@media(min-width:925px){
-  .profile-box{
-    display:block;
-  }
-}
-
-.author__avatar img{
-  width:75px;
-  height:75px;
-  object-fit:cover;
-  object-position:center 60%;
-  border-radius:50%;
-}
-
-@media(min-width:925px){
-  .author__avatar img{
-    width:100%;
-    max-width:175px;
-    height:auto;
-    aspect-ratio:1;
-    padding:5px;
-    border:1px solid var(--border);
-    border-radius:50%;
-  }
-}
-
-.author__name{
-  margin:0 0 .25em;
-  font-size:1em;
-  font-weight:700;
-  color:var(--dark-gray);
-}
-
-@media(min-width:925px){
-  .author__name{
-    margin-top:1em;
-    font-size:1.2em;
-  }
-}
-
-.author__bio{
-  margin:0 0 .75em;
-  font-size:1em;
-  line-height:1.5;
-}
-
-.author__urls{
-  list-style:none;
-  margin:0;
-  padding:0;
-  font-size:1em;
-  line-height:1.6;
-}
-
-.author__urls li{
-  margin-bottom:.35em;
-}
-
-.author__urls i{
-  width:1.25em;
-  margin-right:.35em;
-  color:var(--gray);
-  text-align:center;
-}
-
-.author__urls a{
-  color:var(--text);
-  text-decoration:none;
-}
-.author__urls a:hover{color:var(--link)}
-
-.focus-tag{
-  display:inline-block;
-  margin-top:1em;
-  padding:.35em .65em;
-  background:var(--lighter-gray);
-  color:var(--link);
-  font-size:.85em;
-  border-radius:2px;
-}
-
-/* Page content */
-.page__content h1{
-  margin-top:1em;
-  padding-bottom:.5em;
-  border-bottom:1px solid var(--border);
-  font-size:1.4em;
-  font-weight:700;
-  color:var(--dark-gray);
-  scroll-margin-top:var(--scroll-offset);
-}
-
-.page__content h1:first-of-type{
-  margin-top:0;
-}
-
-.page__content h3{
-  margin:0 0 .75em;
-  font-size:1em;
-  font-weight:700;
-}
-
-.page__content p,
-.page__content li{
-  font-size:1em;
-}
-
-.page__content ul{
-  padding-inline-start:2em;
-  margin-block:.5em 1em;
-}
-
-.page__content li{
-  margin-bottom:.35em;
-}
-
-#about-me{
-  margin-top:0;
-  scroll-margin-top:calc(var(--scroll-offset) + 4em);
-}
-
-.section-note{
-  margin:0 0 1em;
-  color:var(--gray);
-  font-size:.95em;
-}
-
-/* Publications */
-.pub-list{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-
-.pub-list > li{
-  padding:1.25em 0;
-  border-bottom:1px solid var(--lighter-gray);
-}
-
-.pub-list > li:last-child{
-  border-bottom:none;
-}
-
-.pub-title{
-  margin:0 0 .35em;
-  font-weight:700;
-  font-size:1em;
-  line-height:1.45;
-}
-
-.pub-title a{
-  color:var(--dark-gray);
-  text-decoration:none;
-}
-.pub-title a:hover{color:var(--link);text-decoration:underline}
-
-.pub-authors{
-  margin:0 0 .5em;
-  color:var(--gray);
-  font-size:.95em;
-}
-
-.badge{
-  display:inline-block;
-  padding:.2em .65em;
-  background:var(--badge);
-  color:#fff;
-  font-size:.8em;
-  font-style:normal;
-  border-radius:2px;
-}
-
-.research-grid{
-  display:grid;
-  gap:1em;
-  margin:1em 0 0;
-  padding:0;
-  list-style:none;
-}
-
-@media(min-width:600px){
-  .research-grid{
-    grid-template-columns:1fr 1fr;
-  }
-}
-
-.research-card{
-  padding:1em 1.1em;
-  border:1px solid var(--border);
-  border-radius:3px;
-  transition:border-color .2s,box-shadow .2s;
-}
-
-.research-card:hover{
-  border-color:var(--light-gray);
-  box-shadow:0 2px 8px rgba(0,0,0,.04);
-}
-
-.research-card strong{
-  display:block;
-  margin-bottom:.35em;
-  color:var(--dark-gray);
-}
-
-.research-card span{
-  color:var(--gray);
-  font-size:.95em;
-  line-height:1.45;
-}
-
-.edu-item{
-  margin:0;
-  padding:.5em 0;
-  line-height:1.6;
-}
-
-.edu-item em{
-  font-style:normal;
-  color:var(--gray);
-}
+.bdg{display:inline-block;margin-left:4px;font-size:.62em;font-weight:600;line-height:1;white-space:nowrap;vertical-align:middle;border-radius:3px;overflow:hidden}
+.bdg span{display:inline-block;padding:4px 6px;color:#fff}
+.bdg .l{background:#4a4a4a}
+.bdg .r{background:#d9534f}
+.bdg .c{background:#6c9ac7}
+.bdg .g{background:#f2d03b;color:#333}
+.bdg .o{background:#e08a3c}
 </style>
 </head>
 <body>
 
 <div class="masthead">
-  <div class="masthead__inner">
-    <nav class="site-nav" id="site-nav" aria-label="Primary">
-      <ul class="nav-links" id="nav-links">
-        <li class="home"><a href="#about-me">Homepage</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#education">Education</a></li>
-      </ul>
-      <button type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
-        <div class="navicon"></div>
-      </button>
-    </nav>
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary">
+        <button type="button" aria-label="Toggle menu"><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="#about-me">Homepage</a></li>
+          <li class="masthead__menu-item"><a href="#about-me">About Me</a></li>
+          <li class="masthead__menu-item"><a href="#-educations">Educations</a></li>
+          <li class="masthead__menu-item"><a href="#-research">Research</a></li>
+          <li class="masthead__menu-item"><a href="#-publications">Publications</a></li>
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
   </div>
 </div>
 
-<div id="main">
-  <div class="layout">
-    <aside class="sidebar">
-      <div class="profile-box">
-        <div class="author__avatar">
-          <img src="profile.jpg" alt="Bang Xie">
-        </div>
-        <div class="author__content">
-          <h3 class="author__name">Bang Xie</h3>
-          <p class="author__bio">Master's Student · AI for Code</p>
+<div id="main" role="main">
+  <div class="sidebar sticky">
+    <div itemscope itemtype="http://schema.org/Person" class="profile_box">
+      <div class="author__avatar">
+        <img src="profile.jpg" alt="Bang Xie">
+      </div>
+      <div class="author__content">
+        <h3 class="author__name">Bang Xie</h3>
+        <p class="author__bio">Shanghai Jiao Tong University</p>
+      </div>
+      <div class="author__urls-wrapper">
+        <ul class="author__urls social-icons">
+          <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Shanghai, China</li>
+          <li><a href="mailto:xiebang-1213@sjtu.edu.cn"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
+        </ul>
+        <div class="author__urls_sm">
+          <a href="mailto:xiebang-1213@sjtu.edu.cn" aria-label="Email"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i></a>
         </div>
       </div>
+    </div>
+  </div>
 
-      <ul class="author__urls">
-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Shanghai, China</li>
-        <li><i class="fa fa-fw fa-university" aria-hidden="true"></i> Shanghai Jiao Tong University</li>
-        <li>
-          <a href="mailto:xiebang-1213@sjtu.edu.cn">
-            <i class="fas fa-fw fa-envelope" aria-hidden="true"></i>
-            xiebang-1213@sjtu.edu.cn
-          </a>
-        </li>
-      </ul>
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="page__inner-wrap">
+      <section class="page__content" itemprop="text">
+        <p><span class="anchor" id="about-me"></span></p>
 
-      <span class="focus-tag">Current focus: AI for Code</span>
-    </aside>
-
-    <article class="page">
-      <div class="page__content">
-        <span class="anchor" id="about-me"></span>
-
-        <h3>Bang Xie</h3>
         <p>
-          I am a master's student in the 2025 cohort at Shanghai Jiao Tong
-          University. My research focuses on AI for Code — using artificial
-          intelligence to comprehend, create, and improve software.
+          I am a master's student in the 2025 cohort at
+          <a href="https://www.sjtu.edu.cn/">Shanghai Jiao Tong University</a>.
+          My research focuses on AI for Code — using artificial intelligence to
+          comprehend, create, and improve software. Feel free to
+          <a href="mailto:xiebang-1213@sjtu.edu.cn">get in touch</a>
+          if you are interested in collaboration!
         </p>
 
-        <h1 id="research">🔬 Research</h1>
-        <p class="section-note">Areas of interest</p>
-        <ul class="research-grid">
-          <li class="research-card">
-            <strong>Program Understanding</strong>
-            <span>Representing, analyzing, and reasoning about source code.</span>
-          </li>
-          <li class="research-card">
-            <strong>Code Generation</strong>
-            <span>Translating intent and context into reliable software artifacts.</span>
-          </li>
-          <li class="research-card">
-            <strong>AI-assisted Software Engineering</strong>
-            <span>Supporting developers throughout the software development lifecycle.</span>
-          </li>
-          <li class="research-card">
-            <strong>Reinforcement Learning</strong>
-            <span>Building task-specific datasets and using them to fine-tune code models with reinforcement learning.</span>
-          </li>
+        <h1 id="-educations">📖 Educations</h1>
+        <ul>
+          <li><em>2025—Present</em>, Master's Student, <strong>Shanghai Jiao Tong University</strong> · 2025 Cohort.</li>
         </ul>
 
-        <h1 id="publications">📝 Publications</h1>
-        <p class="section-note">Selected research outcomes</p>
+        <h1 id="-research">🔬 Research</h1>
+        <ul>
+          <li><strong>Program Understanding</strong> — Representing, analyzing, and reasoning about source code.</li>
+          <li><strong>Code Generation</strong> — Translating intent and context into reliable software artifacts.</li>
+          <li><strong>AI-assisted Software Engineering</strong> — Supporting developers throughout the software development lifecycle.</li>
+          <li><strong>Reinforcement Learning</strong> — Building task-specific datasets and using them to fine-tune code models with reinforcement learning.</li>
+        </ul>
 
-        <ol class="pub-list">
+        <h1 id="-publications">📝 Publications</h1>
+        <ul>
           <li>
-            <p class="pub-title">
-              <a href="https://arxiv.org/abs/2602.08866" target="_blank" rel="noopener">
-                ArkEval: Benchmarking and Evaluating Automated Code Repair for ArkTS
-              </a>
+            <p>
+              <strong><a href="https://arxiv.org/abs/2602.08866" target="_blank" rel="noopener">ArkEval: Benchmarking and Evaluating Automated Code Repair for ArkTS</a></strong>
+              <span class="bdg"><span class="l">CCF</span><span class="r">A</span></span><br>
+              Bang Xie, Senjian Zhang, Zhiyuan Peng, Wei Chen, Chenhao Ying, Yuan Luo<br>
+              ASE · Accepted (CCF-A)
             </p>
-            <p class="pub-authors">
-              Bang Xie, Senjian Zhang, Zhiyuan Peng, Wei Chen,
-              Chenhao Ying, Yuan Luo
-            </p>
-            <i class="badge">ASE · Accepted (CCF-A)</i>
           </li>
           <li>
-            <p class="pub-title">
-              From Reasoning Strings to Partial Orders: Verifier-Certified Rule
-              Transport through Quotient Policy Optimization
+            <p>
+              <strong>From Reasoning Strings to Partial Orders: Verifier-Certified Rule Transport through Quotient Policy Optimization</strong>
+              <span class="bdg"><span class="l">Status</span><span class="o">Under Review</span></span><br>
+              AAAI 2027
             </p>
-            <i class="badge">AAAI 2027 · Under Review</i>
           </li>
           <li>
-            <p class="pub-title">
-              AppEval: A Unified Benchmark for LLM-Based Mobile Application Repair
-              in ArkTS, Swift, and Kotlin
+            <p>
+              <strong>AppEval: A Unified Benchmark for LLM-Based Mobile Application Repair in ArkTS, Swift, and Kotlin</strong>
+              <span class="bdg"><span class="l">Status</span><span class="o">Under Review</span></span><br>
+              AAAI 2027
             </p>
-            <i class="badge">AAAI 2027 · Under Review</i>
           </li>
           <li>
-            <p class="pub-title">
-              PonyEval: Evaluating LLM-Based Program Repair for Capability-Safe
-              and Actor-Oriented Pony Software
+            <p>
+              <strong>PonyEval: Evaluating LLM-Based Program Repair for Capability-Safe and Actor-Oriented Pony Software</strong>
+              <span class="bdg"><span class="l">Status</span><span class="o">Under Review</span></span><br>
+              AAAI 2027
             </p>
-            <i class="badge">AAAI 2027 · Under Review</i>
           </li>
           <li>
-            <p class="pub-title">
-              OdinEval: A Reproducible Benchmark for LLM-Based Program Repair
-              in the Odin Programming Language
+            <p>
+              <strong>OdinEval: A Reproducible Benchmark for LLM-Based Program Repair in the Odin Programming Language</strong>
+              <span class="bdg"><span class="l">Status</span><span class="o">Under Review</span></span><br>
+              AAAI 2027
             </p>
-            <i class="badge">AAAI 2027 · Under Review</i>
           </li>
           <li>
-            <p class="pub-title">
-              <a href="https://arxiv.org/abs/2601.23009" target="_blank" rel="noopener">
-                SolAgent: A Specialized Multi-Agent Framework for Solidity Code
-                Generation
-              </a>
+            <p>
+              <strong><a href="https://arxiv.org/abs/2601.23009" target="_blank" rel="noopener">SolAgent: A Specialized Multi-Agent Framework for Solidity Code Generation</a></strong>
+              <span class="bdg"><span class="l">Preprint</span><span class="o">arXiv</span></span><br>
+              Wei Chen, Zhiyuan Peng, Xin Yin, Chao Ni, Chenhao Ying, Bang Xie, Yuan Luo<br>
+              arXiv preprint
             </p>
-            <p class="pub-authors">
-              Wei Chen, Zhiyuan Peng, Xin Yin, Chao Ni,
-              Chenhao Ying, Bang Xie, Yuan Luo
-            </p>
-            <i class="badge">arXiv</i>
           </li>
-        </ol>
-
-        <h1 id="education">📖 Educations</h1>
-        <p class="edu-item">
-          <em>2025—Present</em>, Master's Student, Shanghai Jiao Tong University · 2025 Cohort
-        </p>
-      </div>
-    </article>
-  </div>
+        </ul>
+      </section>
+    </div>
+  </article>
 </div>
 
 <script>
 (function () {
-  var btn = document.querySelector("#site-nav button");
-  var menu = document.getElementById("nav-links");
-  if (!btn || !menu) return;
+  var nav = document.getElementById("site-nav");
+  if (!nav) return;
+  var btn = nav.querySelector("button");
+  var visible = nav.querySelector(".visible-links");
+  var hidden = nav.querySelector(".hidden-links");
+  var links = visible ? [].slice.call(visible.children) : [];
+
+  function updateNav() {
+    if (!visible || !hidden) return;
+    links.forEach(function (li) { visible.appendChild(li); });
+    hidden.innerHTML = "";
+    hidden.classList.add("hidden");
+    nav.classList.remove("close");
+
+    if (window.innerWidth < 768) {
+      links.forEach(function (li) { hidden.appendChild(li); });
+      return;
+    }
+
+    var available = nav.clientWidth - btn.offsetWidth - 8;
+    var used = 0;
+    for (var i = 0; i < links.length; i++) {
+      var w = links[i].offsetWidth;
+      if (used + w > available && i > 0) {
+        for (var j = links.length - 1; j >= i; j--) {
+          hidden.insertBefore(links[j], hidden.firstChild);
+        }
+        break;
+      }
+      used += w;
+    }
+  }
 
   btn.addEventListener("click", function () {
-    if (window.innerWidth >= 768) return;
-    var open = menu.classList.toggle("is-open");
-    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    hidden.classList.toggle("hidden");
+    nav.classList.toggle("close");
   });
 
-  menu.addEventListener("click", function () {
-    menu.classList.remove("is-open");
-    btn.setAttribute("aria-expanded", "false");
+  document.addEventListener("click", function (e) {
+    if (!nav.contains(e.target)) {
+      hidden.classList.add("hidden");
+      nav.classList.remove("close");
+    }
   });
+
+  window.addEventListener("resize", updateNav);
+  updateNav();
 })();
 </script>
 </body>
