@@ -1,117 +1,69 @@
 <!doctype html>
 <html lang="en" class="no-js">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
 <title>Bang Xie - Homepage</title>
-<meta name="description" content="Bang Xie, Master's student at Shanghai Jiao Tong University, researching AI for Code.">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-<script>document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/g,"")+" js ";</script>
-<style>
-*,*::before,*::after{box-sizing:border-box}
-html{position:relative;min-height:100%;font-size:15px;-webkit-text-size-adjust:100%}
-body{margin:0;padding:0;color:#494e52;font:14px/1.5 "Trebuchet MS",Helvetica,sans-serif;background:#fff}
-a{color:#224b8d;text-decoration:none}
-a:hover{color:#1a386a}
-@keyframes intro{from{opacity:0}to{opacity:1}}
 
-.masthead{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #f2f3f3;animation:intro .3s both;animation-delay:.15s}
-.masthead__inner-wrap{max-width:925px;margin:0 auto;padding:.5em;font-family:"Trebuchet MS",Helvetica,sans-serif}
-@media(min-width:80em){.masthead__inner-wrap{max-width:1280px}}
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="Bang Xie">
+<meta property="og:title" content="Bang Xie">
 
-.greedy-nav{position:relative;min-width:250px;background:#fff}
-.greedy-nav a{display:block;margin:0 1rem;padding:.5rem 0;color:#7a8288;text-decoration:none;font-weight:600}
-.greedy-nav a:hover{color:#5c6266}
-.greedy-nav button{position:absolute;top:0;right:0;height:100%;padding:0 .5rem;border:0;outline:none;background:#7a8288;color:#fff;cursor:pointer;z-index:2}
-.greedy-nav .navicon{position:relative;display:block;width:28px;height:4px;background:#fff;margin:auto}
-.greedy-nav .navicon::before,.greedy-nav .navicon::after{content:"";position:absolute;left:0;width:28px;height:4px;background:#fff}
-.greedy-nav .navicon::before{top:-8px}
-.greedy-nav .navicon::after{bottom:-8px}
-.greedy-nav .visible-links{display:table;margin:0;padding:0;list-style:none}
-.greedy-nav .visible-links li{display:table-cell;vertical-align:middle;white-space:nowrap}
-.greedy-nav .visible-links li:first-child{font-weight:700}
-.greedy-nav .visible-links li:first-child a{margin-left:0}
-.greedy-nav .visible-links a{position:relative}
-.greedy-nav .visible-links a::before{content:"";position:absolute;left:0;bottom:0;height:4px;background:#bdc1c4;width:100%;transform:scaleX(0);transition:transform .2s ease-in-out}
-.greedy-nav .visible-links a:hover::before{transform:scaleX(1)}
-.masthead__menu-home-item{display:none!important}
-@media(min-width:48em){.masthead__menu-home-item{display:table-cell!important}}
+  <link rel="canonical" href="https://sjtujinmao.github.io/">
+  <meta property="og:url" content="https://sjtujinmao.github.io/">
 
-.greedy-nav .hidden-links{position:absolute;top:100%;right:0;margin-top:15px;padding:5px;list-style:none;border:1px solid #f2f3f3;border-radius:4px;background:#fff;box-shadow:0 0 10px rgba(0,0,0,.25);z-index:30}
-.greedy-nav .hidden-links.hidden{display:none}
-.greedy-nav .hidden-links li{display:block;border-bottom:1px solid #f2f3f3}
-.greedy-nav .hidden-links li:last-child{border-bottom:none}
-.greedy-nav .hidden-links a{margin:0;padding:10px 20px;font-size:1em}
+  <meta property="og:description" content="Bang Xie, Master's student at Shanghai Jiao Tong University, researching AI for Code.">
 
-#main{max-width:925px;margin:1em auto 3em;padding:0 1em;animation:intro .3s both;animation-delay:.35s}
-#main::after{content:"";display:table;clear:both}
-@media(min-width:80em){#main{max-width:1280px}}
+<!-- end SEO -->
 
-.sidebar{clear:both;margin-bottom:1em}
-@media(min-width:57.8125em){
-  .sidebar{width:15.2542372881%;float:left;margin-right:1.6949152542%}
-  .sticky{position:sticky;top:6em}
-  .page{width:83.0508474576%;float:right;padding-left:4.2372881356%}
-}
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.profile_box{display:flex;align-items:center;justify-content:flex-start}
-@media(min-width:57.8125em){.profile_box{display:block}}
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
 
-.author__avatar{display:table-cell;vertical-align:top;width:75px}
-@media(min-width:57.8125em){.author__avatar{display:block;width:auto;height:auto}}
-.author__avatar img{max-width:175px;min-width:75px;width:75px;height:75px;object-fit:cover;object-position:center 60%;border-radius:12px}
-@media(min-width:57.8125em){.author__avatar img{width:100%;height:auto;padding:5px;border:1px solid #f2f3f3}}
+<!-- For all browsers -->
+<link rel="stylesheet" href="assets/css/main.css">
 
-.author__content{display:table-cell;vertical-align:top;padding-left:10px;line-height:1;min-width:120px}
-@media(min-width:57.8125em){.author__content{display:block;width:100%;padding:0}}
-.author__name{margin:0;font-size:1em;font-weight:700}
-@media(min-width:57.8125em){.author__name{margin:10px 0;font-size:1.4em}}
-.author__bio{margin:0;line-height:1.5}
-@media(min-width:57.8125em){.author__bio{margin:10px 0 20px}}
-
-.author__urls-wrapper{display:table-cell;vertical-align:middle}
-@media(min-width:57.8125em){.author__urls-wrapper{display:block}}
-.author__urls{margin:0;padding:0;list-style:none;font-size:1em;line-height:1.5}
-.author__urls li{margin-bottom:.35em;white-space:nowrap}
-.author__urls a{color:inherit;text-decoration:none}
-.author__urls a:hover{text-decoration:underline}
-.author__urls i{width:1.25em;margin-right:.25em;color:#7a8288;text-align:center}
-.author__urls_sm{display:block;padding:.25em;font-size:1.75em}
-.author__urls_sm a{color:inherit;text-decoration:none;margin-right:.35em}
-@media(min-width:57.8125em){.author__urls_sm{display:none}}
-
-.page__content #about-me{margin-top:-10em}
-.page__content #about-me::before{content:"";display:block;position:relative;width:0;height:10em;margin-top:-10em}
-.page__content h1{margin-top:1em;padding-bottom:.5em;border-bottom:1px solid #f2f3f3;font-size:1.4em;font-weight:700;scroll-margin-top:2em}
-.page__content h1::before,.anchor::before{content:"";display:block;position:relative;width:0;height:2em;margin-top:-2em}
-.page__content p,.page__content li{font-size:1em}
-.page__content p{margin:0 0 .5em}
-.page__content ul{padding-inline-start:2em;margin-block:.5em 1em}
-.page__content li{margin-bottom:.5em}
-.page__content a{text-decoration:underline}
-
-.bdg{display:inline-block;margin-left:4px;font-size:.62em;font-weight:600;line-height:1;white-space:nowrap;vertical-align:middle;border-radius:3px;overflow:hidden}
-.bdg span{display:inline-block;padding:4px 6px;color:#fff}
-.bdg .l{background:#4a4a4a}
-.bdg .r{background:#d9534f}
-.bdg .c{background:#6c9ac7}
-.bdg .g{background:#f2d03b;color:#333}
-.bdg .o{background:#e08a3c}
-</style>
+<meta http-equiv="cleartype" content="on">
+<head>
+  <base target="_blank">
 </head>
-<body>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/site.webmanifest">
 
-<div class="masthead">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="assets/css/academicons.css"/>
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav" aria-label="Primary">
-        <button type="button" aria-label="Toggle menu"><div class="navicon"></div></button>
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="#about-me">Homepage</a></li>
-          <li class="masthead__menu-item"><a href="#about-me">About Me</a></li>
-          <li class="masthead__menu-item"><a href="#-educations">Educations</a></li>
-          <li class="masthead__menu-item"><a href="#-research">Research</a></li>
-          <li class="masthead__menu-item"><a href="#-publications">Publications</a></li>
+          
+            <li class="masthead__menu-item"><a href="/#about-me">About Me</a></li>
+          
+            <li class="masthead__menu-item"><a href="/#-educations">Educations</a></li>
+          
+            <li class="masthead__menu-item"><a href="/#-research">Research</a></li>
+          
+            <li class="masthead__menu-item"><a href="/#-publications">Publications</a></li>
+          
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
@@ -119,157 +71,104 @@ a:hover{color:#1a386a}
   </div>
 </div>
 
-<div id="main" role="main">
+    <div id="main" role="main">
+      
   <div class="sidebar sticky">
-    <div itemscope itemtype="http://schema.org/Person" class="profile_box">
-      <div class="author__avatar">
-        <img src="profile.jpg" alt="Bang Xie">
-      </div>
-      <div class="author__content">
-        <h3 class="author__name">Bang Xie</h3>
-        <p class="author__bio">Shanghai Jiao Tong University</p>
-      </div>
-      <div class="author__urls-wrapper">
-        <ul class="author__urls social-icons">
-          <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Shanghai, China</li>
-          <li><a href="mailto:xiebang-1213@sjtu.edu.cn"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
-        </ul>
-        <div class="author__urls_sm">
-          <a href="mailto:xiebang-1213@sjtu.edu.cn" aria-label="Email"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i></a>
-        </div>
-      </div>
+  
+
+<div itemscope itemtype="http://schema.org/Person" class="profile_box">
+
+  <div class="author__avatar">
+    <img src="profile.jpg" class="author__avatar" alt="Bang Xie">
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Bang Xie</h3>
+    <p class="author__bio">Shanghai Jiao Tong University</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <ul class="author__urls social-icons">
+      
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Shanghai, China</li>
+      
+        <li><a href="mailto:xiebang-1213@sjtu.edu.cn"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
+      
+    </ul>
+      <div class="author__urls_sm">
+      
+        <a href="mailto:xiebang-1213@sjtu.edu.cn"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i></a>
+      
     </div>
   </div>
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="page__inner-wrap">
-      <section class="page__content" itemprop="text">
-        <p><span class="anchor" id="about-me"></span></p>
-
-        <p>
-          I am a master's student in the 2025 cohort at
-          <a href="https://www.sjtu.edu.cn/">Shanghai Jiao Tong University</a>.
-          My research focuses on AI for Code — using artificial intelligence to
-          comprehend, create, and improve software. Feel free to
-          <a href="mailto:xiebang-1213@sjtu.edu.cn">get in touch</a>
-          if you are interested in collaboration!
-        </p>
-
-        <h1 id="-educations">📖 Educations</h1>
-        <ul>
-          <li><em>2025—Present</em>, Master's Student, <strong>Shanghai Jiao Tong University</strong> · 2025 Cohort.</li>
-        </ul>
-
-        <h1 id="-research">🔬 Research</h1>
-        <ul>
-          <li><strong>Program Understanding</strong> — Representing, analyzing, and reasoning about source code.</li>
-          <li><strong>Code Generation</strong> — Translating intent and context into reliable software artifacts.</li>
-          <li><strong>AI-assisted Software Engineering</strong> — Supporting developers throughout the software development lifecycle.</li>
-          <li><strong>Reinforcement Learning</strong> — Building task-specific datasets and using them to fine-tune code models with reinforcement learning.</li>
-        </ul>
-
-        <h1 id="-publications">📝 Publications</h1>
-        <ul>
-          <li>
-            <p>
-              <strong><a href="https://arxiv.org/abs/2602.08866" target="_blank" rel="noopener">ArkEval: Benchmarking and Evaluating Automated Code Repair for ArkTS</a></strong>
-              <span class="bdg"><span class="l">CCF</span><span class="r">A</span></span><br>
-              Bang Xie, Senjian Zhang, Zhiyuan Peng, Wei Chen, Chenhao Ying, Yuan Luo<br>
-              ASE · Accepted (CCF-A)
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>From Reasoning Strings to Partial Orders: Verifier-Certified Rule Transport through Quotient Policy Optimization</strong>
-              <span class="bdg"><span class="l">Status</span><span class="o">Under Review</span></span><br>
-              AAAI 2027
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>AppEval: A Unified Benchmark for LLM-Based Mobile Application Repair in ArkTS, Swift, and Kotlin</strong>
-              <span class="bdg"><span class="l">Status</span><span class="o">Under Review</span></span><br>
-              AAAI 2027
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>PonyEval: Evaluating LLM-Based Program Repair for Capability-Safe and Actor-Oriented Pony Software</strong>
-              <span class="bdg"><span class="l">Status</span><span class="o">Under Review</span></span><br>
-              AAAI 2027
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>OdinEval: A Reproducible Benchmark for LLM-Based Program Repair in the Odin Programming Language</strong>
-              <span class="bdg"><span class="l">Status</span><span class="o">Under Review</span></span><br>
-              AAAI 2027
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong><a href="https://arxiv.org/abs/2601.23009" target="_blank" rel="noopener">SolAgent: A Specialized Multi-Agent Framework for Solidity Code Generation</a></strong>
-              <span class="bdg"><span class="l">Preprint</span><span class="o">arXiv</span></span><br>
-              Wei Chen, Zhiyuan Peng, Xin Yin, Chao Ni, Chenhao Ying, Bang Xie, Yuan Luo<br>
-              arXiv preprint
-            </p>
-          </li>
-        </ul>
-      </section>
-    </div>
-  </article>
 </div>
 
-<script>
-(function () {
-  var nav = document.getElementById("site-nav");
-  if (!nav) return;
-  var btn = nav.querySelector("button");
-  var visible = nav.querySelector(".visible-links");
-  var hidden = nav.querySelector(".hidden-links");
-  var links = visible ? [].slice.call(visible.children) : [];
+  
+  </div>
 
-  function updateNav() {
-    if (!visible || !hidden) return;
-    links.forEach(function (li) { visible.appendChild(li); });
-    hidden.innerHTML = "";
-    hidden.classList.add("hidden");
-    nav.classList.remove("close");
+    
+      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <meta itemprop="headline" content="">
+        <div class="page__inner-wrap">
+          <section class="page__content" itemprop="text">
+            
+<p><span class="anchor" id="about-me"></span></p>
 
-    if (window.innerWidth < 768) {
-      links.forEach(function (li) { hidden.appendChild(li); });
-      return;
-    }
+<p>I am a master's student in the 2025 cohort at <a href="https://www.sjtu.edu.cn/">Shanghai Jiao Tong University</a>.</p>
 
-    var available = nav.clientWidth - btn.offsetWidth - 8;
-    var used = 0;
-    for (var i = 0; i < links.length; i++) {
-      var w = links[i].offsetWidth;
-      if (used + w > available && i > 0) {
-        for (var j = links.length - 1; j >= i; j--) {
-          hidden.insertBefore(links[j], hidden.firstChild);
-        }
-        break;
-      }
-      used += w;
-    }
-  }
+<p>My research focuses on AI for Code — using artificial intelligence to comprehend, create, and improve software. Feel free to <a href="mailto:xiebang-1213@sjtu.edu.cn">get in touch</a> if you are interested in collaboration!</p>
 
-  btn.addEventListener("click", function () {
-    hidden.classList.toggle("hidden");
-    nav.classList.toggle("close");
-  });
+<h1 id="-educations">📖 Educations</h1>
+<ul>
+  <li><em>2025—Present</em>, Master's Student, <strong>Shanghai Jiao Tong University</strong> · 2025 Cohort.</li>
+</ul>
 
-  document.addEventListener("click", function (e) {
-    if (!nav.contains(e.target)) {
-      hidden.classList.add("hidden");
-      nav.classList.remove("close");
-    }
-  });
+<h1 id="-research">🔬 Research</h1>
+<ul>
+  <li><strong>Program Understanding</strong> — Representing, analyzing, and reasoning about source code.</li>
+  <li><strong>Code Generation</strong> — Translating intent and context into reliable software artifacts.</li>
+  <li><strong>AI-assisted Software Engineering</strong> — Supporting developers throughout the software development lifecycle.</li>
+  <li><strong>Reinforcement Learning</strong> — Building task-specific datasets and using them to fine-tune code models with reinforcement learning.</li>
+</ul>
 
-  window.addEventListener("resize", updateNav);
-  updateNav();
-})();
-</script>
-</body>
+<h1 id="-publications">📝 Publications</h1>
+
+<ul>
+  <li>
+    <p><strong><a href="https://arxiv.org/abs/2602.08866">ArkEval: Benchmarking and Evaluating Automated Code Repair for ArkTS</a></strong> <span class="bdg"><span class="l">CCF</span><span class="r">A</span></span><br />
+Bang Xie, Senjian Zhang, Zhiyuan Peng, Wei Chen, Chenhao Ying, Yuan Luo<br />
+ASE · Accepted (CCF-A)</p>
+  </li>
+  <li>
+    <p><strong>From Reasoning Strings to Partial Orders: Verifier-Certified Rule Transport through Quotient Policy Optimization</strong> <span class="bdg"><span class="l">Status</span><span class="o">Under Review</span></span><br />
+AAAI 2027 · Under Review</p>
+  </li>
+  <li>
+    <p><strong>AppEval: A Unified Benchmark for LLM-Based Mobile Application Repair in ArkTS, Swift, and Kotlin</strong> <span class="bdg"><span class="l">Status</span><span class="o">Under Review</span></span><br />
+AAAI 2027 · Under Review</p>
+  </li>
+  <li>
+    <p><strong>PonyEval: Evaluating LLM-Based Program Repair for Capability-Safe and Actor-Oriented Pony Software</strong> <span class="bdg"><span class="l">Status</span><span class="o">Under Review</span></span><br />
+AAAI 2027 · Under Review</p>
+  </li>
+  <li>
+    <p><strong>OdinEval: A Reproducible Benchmark for LLM-Based Program Repair in the Odin Programming Language</strong> <span class="bdg"><span class="l">Status</span><span class="o">Under Review</span></span><br />
+AAAI 2027 · Under Review</p>
+  </li>
+  <li>
+    <p><strong><a href="https://arxiv.org/abs/2601.23009">SolAgent: A Specialized Multi-Agent Framework for Solidity Code Generation</a></strong> <span class="bdg"><span class="l">Preprint</span><span class="o">arXiv</span></span><br />
+Wei Chen, Zhiyuan Peng, Xin Yin, Chao Ni, Chenhao Ying, Bang Xie, Yuan Luo<br />
+arXiv</p>
+  </li>
+</ul>
+
+          </section>
+        </div>
+      </article>
+    </div>
+
+    <script src="assets/js/main.min.js"></script>
+
+  </body>
 </html>
